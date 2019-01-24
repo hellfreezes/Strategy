@@ -51,6 +51,7 @@ public class Building : MonoBehaviour {
         if (counter >= gatheringTime)
         {
             counter = 0;
+
             OnResourceExtracted();
         }
     }

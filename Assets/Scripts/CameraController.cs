@@ -33,6 +33,8 @@ public class CameraController : MonoBehaviour {
         {
             cameraPoint.Translate(Vector3.forward * ver * movementSpeed * Time.deltaTime);
         }
+
+        /* Управление камеры мышью отключено
         if (Input.mousePosition.x >= Screen.width-10)
         {
             cameraPoint.Translate(Vector3.right * movementSpeed * Time.deltaTime);
@@ -49,6 +51,7 @@ public class CameraController : MonoBehaviour {
         {
             cameraPoint.Translate(Vector3.forward * -movementSpeed * Time.deltaTime);
         }
+        */
 
         transform.position = cameraPosition.position;
     }

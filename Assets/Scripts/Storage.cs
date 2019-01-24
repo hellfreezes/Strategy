@@ -17,7 +17,7 @@ public class Storage : MonoBehaviour {
 		
 	}
 
-    private void OnResourceExtracted(object obj, EventArgs args)
+    public void OnResourceExtracted(object obj, EventArgs args)
     {
         Building b = (Building)obj;
         AddResource(b.GetResourceType(), b.ResourceAtATime);
@@ -28,6 +28,9 @@ public class Storage : MonoBehaviour {
         if (storage.ContainsKey(res))
         {
             storage[res] += value;
+
+            Debug.Log("Добавляем " + value);
+
         } else
         {
             Debug.LogError("В хранилище отсутсвует ресурс " + res.ToString());
